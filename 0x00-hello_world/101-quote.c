@@ -2,10 +2,10 @@
 #include <unistd.h>
 /**
  * main - A c prgam that prints a line to the stadard error
- * Retun: 1 (pass)
+ * Return: 1 (pass)
  */
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }
