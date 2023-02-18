@@ -1,8 +1,9 @@
 #include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - Entry point
- * retun: Always 0 (PASS)
+ * main- Entry point
+ * Return:0 (PASS)
  */
 int main(void)
 {
