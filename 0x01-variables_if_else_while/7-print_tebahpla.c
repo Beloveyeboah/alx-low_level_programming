@@ -2,18 +2,16 @@
 #include <time.h>
 #include <stdlib.h>
 /**
- * main - entry point
+ * main -entry point
  *
- * description: another base
+ * description: another bas
  *
  * Return:0
  */
 int main(void)
 {
-	char c;
+	char c = 'z';
 
-	c = 'z'
-	
 	while
 		(c >= 'a')
 		{
