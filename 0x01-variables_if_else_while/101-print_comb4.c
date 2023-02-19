@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main- entry point
+ * main-Entry point
  *
- * description:any
+ * description: any
  *
- * Return:0 (PASS)
+ * Return:0
  */
 int main(void)
 {
@@ -25,7 +25,7 @@ int main(void)
 				{
 					putchar('0' + e);
 					putchar('0' + d);
-					putchar('e' + c);
+					putchar('0' + c);
 
 					if (c + d + e != 9 + 8 + 7)
 					{
