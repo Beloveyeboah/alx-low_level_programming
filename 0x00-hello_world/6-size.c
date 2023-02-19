@@ -2,6 +2,7 @@
 /**
  * main - Entry point
  *
+ *Description:Anything
  * Return:Aways 0(success)
  */
 int main(void)
