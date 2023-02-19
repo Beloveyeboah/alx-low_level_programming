@@ -5,6 +5,7 @@
  * main- Entry point
  *
  * description: power of
+ *
  * Return:0 (PASS)
  */
 int main(void)
