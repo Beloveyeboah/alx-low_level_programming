@@ -4,7 +4,7 @@
 /**
  * main- Entry point
  *
- * description: power
+ * description: power of
  * Return:0 (PASS)
  */
 int main(void)
