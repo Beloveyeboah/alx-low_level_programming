@@ -1,12 +1,14 @@
 #include "main.h"
 /**
- * main- print alpabet
+ * print_alphabet-print_alphabet
+ *
+ * description: alpabets
  *
  * Return: void
  */
 void print_alphabet(void)
 {
-	char c;
+	int c;
 
 	for (c = 'a'; c <= 'z' ; c++)
 	{
