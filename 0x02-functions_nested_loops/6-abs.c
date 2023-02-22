@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * _abs.c -abs.c
- *
+ *_abs- compute the absolute value of an integer
+
+ *@n:the int to check
  * click: the int
  *
  * Return: the absolute
