@@ -1,14 +1,15 @@
 #include "main.h"
+
 /**
- * _array - _array reverses the array
+ * reverse_array - reverse_array function reverses the stringes
  *
  * @a: array
  *
  * @n: number of element
  *
- * Return: 0
+ * Return: rev
  */
-void reverse_array(int *a, int n);
+void reverse_array(int *a, int n)
 {
 	int i;
 	int j;
@@ -20,5 +21,4 @@ void reverse_array(int *a, int n);
 		a[i] = a[i];
 		a[i] = j;
 	}
-	return (0);
 }
