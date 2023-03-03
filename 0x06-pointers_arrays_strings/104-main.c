@@ -1,4 +1,5 @@
 #include <stdio.h>
+#imclude "main.h"
 
 /**
  * main - check the code
@@ -119,6 +120,7 @@ int main(void)
 	print_buffer(buffer, sizeof(buffer));
 	return (0);
 }#include <stdio.h>
+
 
 /**
  * main - check the code
