@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main -ain function write
- *
- * Return: 0
- */
+
 int main(void)
 {
 	int n;
