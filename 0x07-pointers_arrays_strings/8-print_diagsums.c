@@ -23,6 +23,7 @@ void print_diagsums(int *a, int size)
 		sum1 += a[y];
 		a += size;
 	}
+		a -= size;
 	for (y = 0; y < size; y++)
 	{
 		sum2 += a[y];
