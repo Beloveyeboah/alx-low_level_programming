@@ -4,7 +4,7 @@
  * argstostr - argstostr write
  * @ac: take
  * @av: take
- * Return: the
+ * Return: thearray
  */
 char *argstostr(int ac, char **av)
 {
