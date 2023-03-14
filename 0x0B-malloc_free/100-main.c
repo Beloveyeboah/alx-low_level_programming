@@ -10,7 +10,7 @@
  */
 int main(int ac, char *av[])
 {
-	char s;
+	char *s;
 
 	s = argstostr(ac, av);
 	if (s == NULL)
