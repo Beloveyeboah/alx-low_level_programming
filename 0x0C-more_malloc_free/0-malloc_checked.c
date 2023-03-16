@@ -3,16 +3,17 @@
 /**
  * malloc_checked - check areay
  * @b: the
- * Return: nothing
+ * Return: void
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+void *ptr;
 
-	p = malloc(b);
-	if (p == NULL)
-	{
-		exit (98);
-	}
-	return (p);
+ptr = malloc(b);
+if (ptr == NULL)
+{
+exit(98);
+}
+
+return (ptr);
 }

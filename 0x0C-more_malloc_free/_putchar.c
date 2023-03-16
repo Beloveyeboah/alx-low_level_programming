@@ -1,9 +1,9 @@
-#include <stdlib.h>
+#include <unistd>
 
 /**
  * _putchar - writes
  * @c: the
- * Return: 0
+ * Return: nothing
  */
 int _putchar(char c)
 {
