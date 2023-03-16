@@ -3,6 +3,7 @@
 /**
  * malloc_checked - check areay
  * @b: the
+ *
  * Return: void
  */
 void *malloc_checked(unsigned int b)
