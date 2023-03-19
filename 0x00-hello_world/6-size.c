@@ -1,6 +1,7 @@
  #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Entry point using print
  * Return:Aways 0(success)
  */
 int main(void)
