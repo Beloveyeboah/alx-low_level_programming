@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - get_op_func
+ * get_op_func - get_op_func print
  * @s: the
  * Return: 0
  */
