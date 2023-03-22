@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * op_add - op_add(
+ * op_add - op_add
  * @a: the
  * @b: the
  *
