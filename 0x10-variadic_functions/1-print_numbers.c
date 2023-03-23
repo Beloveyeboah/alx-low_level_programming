@@ -5,7 +5,7 @@
 /**
  * print_numbers - print_numbers prints
  * @n: number
- * @seperator: the str
+ * @separator: the str
  * @...: the variable
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
