@@ -3,7 +3,8 @@
 
 /**
  * print_list - primts
- * @h: the list
+ * @h: the lis
+ *
  * Return: nodes
  */
 size_t print_list(const list_t *h)
