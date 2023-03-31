@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 /**
- * stuct list_s -singly
+ * stuct list_s - struct list_s singly
  * @str: strimg
  * @len: lentg
  * @next: points
