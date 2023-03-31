@@ -1,42 +1,41 @@
-#include "lists.h"
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include "lists.h"
+
 
 
 /**
  * add_node_end - adid_node write
+ *
  * @head: a poimt
+ *
  * @str: the string
+ *
  * Return: new
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	char *dup;
-	int len;
-	list_t *new, *last;
+	list_t *new;
+	list_t *temp = *head;
+	unsigned int len = 0;
+
+	while (str[len])
+		len++;
 
 	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	if (!new)
 		return (NULL);
-	dup = strdup(str);
-	if (dup == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-	for (len = 0; str[len]; len++)
-	new->str = dup;
+	new->str = strdup(str);
 	new->len = len;
 	new->next = NULL;
 
 	if (*head == NULL)
-		*head = new;
-	else
 	{
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
+		*head = new;
+		return (new);
 	}
-	return (*head);
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new;
+	return (new);
 }
