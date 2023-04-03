@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * add_nodeint - add_nodeint adds all nodes
@@ -18,5 +19,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 	sun->n = n;
 	sun->next = *head;
+	*head = sun;
 	return (sun);
 }
