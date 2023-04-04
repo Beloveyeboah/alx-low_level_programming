@@ -1,12 +1,13 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - insert_nodeint_at_index( write
+ * insert_nodeint_at_index - insert_nodeint_at_index write the list
  *
  * @head: pointer
+ *
  * @n: the interger
  *
- * @idx: the next
+ * @idx: the index of the list
  *
  * Return: 0
  */
