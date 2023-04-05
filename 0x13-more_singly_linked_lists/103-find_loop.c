@@ -19,9 +19,15 @@ listint_t *find_listint_loop(listint_t *head)
 		if (fat == sun)
 		{
 			sun = head;
-			fat = fat->next;
+			{
+				while (sun != fat)
+				{
+					sun = sun->next;
+					fat = fat->next;
+				}
+				return (fat);
+			}
 		}
 	}
-	return (fat);
+	return (NULL);
 }
-
