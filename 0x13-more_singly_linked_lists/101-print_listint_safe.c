@@ -3,7 +3,6 @@
 
 size_t looped_listint_len(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
-
 /**
  * looped_listint_len - prints the number of unique nodes
  * @head: A pointer to the head of
@@ -17,6 +16,8 @@ size_t looped_listint_len(const listint_t *head)
 
 	if (head == NULL || head->next == NULL)
 		return (0);
+	cat = head->next;
+	fun = (head->next)->next;
 	while (fun)
 	{
 		if (cat == fun)
@@ -44,7 +45,7 @@ size_t looped_listint_len(const listint_t *head)
 
 
 /**
- * print_listint_safe - Prints a listint_t list safely.
+ * loop_listint_safe - Prints a listint_t list safely.
  * @head: A pointer to the head of the listint_t list.
  * Return: nodes
  */
@@ -60,6 +61,7 @@ size_t print_listint_safe(const listint_t *head)
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 		}
+
 	}
 	else
 	{
