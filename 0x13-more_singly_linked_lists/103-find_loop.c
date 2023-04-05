@@ -12,7 +12,7 @@ listint_t *find_listint_loop(listint_t *head)
 
 	if (!head)
 		return (NULL);
-	while (sun && fat && fat->)
+	while (sun && fat && fat->next)
 	{
 		fat = fat->next->next;
 		sun = sun->next;
@@ -21,7 +21,7 @@ listint_t *find_listint_loop(listint_t *head)
 			sun = head;
 			fat = fat->next;
 		}
-		return (fat);
 	}
+	return (fat);
 }
 
