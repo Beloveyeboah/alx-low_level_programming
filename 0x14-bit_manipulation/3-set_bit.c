@@ -3,11 +3,11 @@
 /**
  * set_bit - set_bit sets tje value to 1
  *
- * n: the pointet
+ * @n: the pointet
  *
  * @index: thr index
  *
- * Returm: 0
+ * Return: 0
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
