@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_binary + prints the decimal of binary
+ * print_binary - prints the decimal of binary
  *
  * @n: the interger
  *
