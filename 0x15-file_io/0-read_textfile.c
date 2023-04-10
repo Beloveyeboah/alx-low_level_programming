@@ -3,11 +3,11 @@
 /**
  * read_textfile - read_textfile writes to a file
  *
- * @filenmae - the file to be written
+ * @filename: the file to be written
  *
- * @letters - the letter
+ * @letters: the letter
  *
- * Return - 0
+ * Return: 0
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
