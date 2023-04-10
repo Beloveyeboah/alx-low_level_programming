@@ -19,7 +19,7 @@ char *cope_buffer(char *file)
 	{
 		dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", file);
-		exit(98);
+		exit(99);
 	}
 	return (buffer);
 }
@@ -85,11 +85,10 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(99);
 		}
-		vin = read(from, buffer, 1025);
+		vin = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
-	while (vin > 0);
-		free(buffer);
-		close_file(from);
+	} while (vin > 0);
+	free(buffer);
+	close_file(from);
 	return (0);
 }
