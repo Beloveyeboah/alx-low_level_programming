@@ -5,7 +5,7 @@
  *
  * @filename: the nmae of tje file
  *
- * @content: the content of the file
+ * @text_content: the content of the file
  *
  * Return: 0
  */
@@ -26,7 +26,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	m = open(filename, O_WRONLY | O_APPEND);
 	k = write(m, text_content, fun);
 	if (m == -1 || k == -1)
-		return (0);
+		return (-1);
 	close(m);
-	return (0);
+	return (1);
 }
