@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 		for (fun = 0; text_content[fun];)
 			fun++;
 	}
-	sun = open(filename, O_CREAT | O_RDWR, 0600);
+	sun = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
 	cat = write(sun, text_content, fun);
 	if (sun == -1 || cat == -1)
 		return (-1);
