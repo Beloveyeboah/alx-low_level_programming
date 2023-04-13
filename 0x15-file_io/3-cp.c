@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 char *cope_buffer(char *file);
 void close_file(int fd);
@@ -61,7 +63,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp flie_from_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	buffer = cope_buffer(argv[2]);
@@ -72,7 +74,7 @@ int main(int argc, char *argv[])
 		if (from == -1 || vin == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Erro: cant read from file %s\n", argv[1]);
+					"Erro: can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
