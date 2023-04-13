@@ -26,10 +26,12 @@ void look_elf(unsigned char *e_ident)
 {
 	int abc;
 
-	for (abc = 0; abc <= 3; abc++)
+	for (abc = 0; abc < 4; abc++)
 	{
-		if (e_ident[abc] != 127 && e_ident[abc] != 'E' &&
-				e_ident[abc] != 'L' && e_ident[abc] != 'F')
+		if (e_ident[abc] != 127 &&
+		    e_ident[abc] != 'E' &&
+	            e_ident[abc] != 'L' &&
+	            e_ident[abc] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -46,7 +48,7 @@ void check_magic(unsigned char *e_ident)
 {
 	int abc;
 
-	printf("Magic: ");
+	printf("  Magic:   ");
 	for (abc = 0; abc < EI_NIDENT; abc++)
 	{
 		printf("%02x", e_ident[abc]);
@@ -63,7 +65,7 @@ void check_magic(unsigned char *e_ident)
  */
 void check_class(unsigned char *e_ident)
 {
-	printf(" Class: ");
+	printf("  Class:                             ");
 	switch (e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
@@ -86,7 +88,7 @@ void check_class(unsigned char *e_ident)
  */
 void check_data(unsigned char *e_ident)
 {
-	printf("Data: ");
+	printf("  Data:                              ");
 	switch (e_ident[EI_DATA])
 	{
 		case ELFDATANONE:
@@ -109,7 +111,9 @@ void check_data(unsigned char *e_ident)
  */
 void check_version(unsigned char *e_ident)
 {
-	printf("  Version: %d", e_ident[EI_VERSION]);
+	printf("  Version:                           %d",
+			e_ident[EI_VERSION]);
+
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
@@ -127,11 +131,14 @@ void check_version(unsigned char *e_ident)
  */
 void check_osabi(unsigned char *e_ident)
 {
-	printf("  OS/ABI: ");
+	printf("  OS/ABI:                            ");
 	switch (e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE:
 			printf("UNIX - System V\n");
+			break;
+		case ELFOSABI_HPUX:
+			printf("UNIX - HP-UX\n");
 			break;
 		case ELFOSABI_NETBSD:
 			printf("UNIX - NetBSD\n");
@@ -168,8 +175,8 @@ void check_osabi(unsigned char *e_ident)
  */
 void check_abi(unsigned char *e_ident)
 {
-	printf("  ABI Version: %d\n",e_ident[EI_ABIVERSION]);
-
+	printf("  ABI Version:                       %d\n",
+			e_ident[EI_ABIVERSION]);
 }
 
 /**
@@ -181,7 +188,7 @@ void check_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
-	printf("  Type: ");
+	printf("  Type:                              ");
 	switch (e_type)
 	{
 		case ET_NONE:
@@ -211,7 +218,8 @@ void check_type(unsigned int e_type, unsigned char *e_ident)
  */
 void check_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-	printf("  Entry point address: ");
+	printf("  Entry point address:               ");
+
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
