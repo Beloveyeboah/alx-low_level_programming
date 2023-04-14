@@ -259,7 +259,7 @@ void close_elf(int elf)
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	Elf32_Ehdr *header;
+	Elf64_Ehdr *header;
 	int x, y;
 
 	x = open(argv[1], O_RDONLY);
