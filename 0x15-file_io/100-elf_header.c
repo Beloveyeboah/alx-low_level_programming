@@ -4,6 +4,8 @@
 #include <elf.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <sys/stat.h>
+
 
 void look_elf(unsigned char *e_ident);
 void check_magic(unsigned char *e_ident);
@@ -67,6 +69,7 @@ void check_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
 	switch (e_ident[EI_CLASS])
+	
 	{
 		case ELFCLASSNONE:
 			printf("none\n");
@@ -290,6 +293,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	check_osabi(header->e_ident);
        	check_type(header->e_type, header->e_ident);
 	check_entry(header->e_type, header->e_ident);
+	
 	free(header);
 	close_elf(x);
 	return (0);
