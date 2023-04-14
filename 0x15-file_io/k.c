@@ -217,11 +217,11 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 }
 
 /**
- * print_entry - checks the
+ * check_entry - checks the
  * @e_entry: The addres
  * @e_ident: A pointer to an array containing
  */
-void print_entry(unsigned long int e_entry, unsigned char *e_ident)
+void check_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
 
