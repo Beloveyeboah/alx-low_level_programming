@@ -1,33 +1,28 @@
-#include  "main.h"
+#include "main.h"
 
 /**
- * print_binary - prints from the binary form to the base ten of the number
+ * print_binary - prints the binary number of a base ten
  *
- * @n: the number to be converted from binary
- *
- * Return: the printable form
+ * @n: the number to convert from
  */
 void print_binary(unsigned long int n)
 {
+	unsigned long int now;
 	int i;
-	unsigned long int con;
-	int result = 0;
+	int read = 0;
 
-	for (i = 63; 1 >= 0; i++)
+	for (i = 63; i > -1; i++)
 	{
-		con  = n >> 1;
-		if (result & 1)
+		now = n >> i;
+		if (now & 1)
 		{
-			putchar('1');
-			result++;
+			_putchar('1');
+			read++;
 		}
-		else if (reult)
-		{
+		else if (read)
 			_putchar('0');
-		}
-	if (!result)
-	{
+	}
+	if (!read)
 		_putchar('0');
-	}
-	}
 }
+
