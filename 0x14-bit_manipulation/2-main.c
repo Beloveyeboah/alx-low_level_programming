@@ -5,7 +5,7 @@
  * main - check the code
  * Return: Always 0.
  */
-int mian(void)
+int main(void)
 {
 	int n;
 
