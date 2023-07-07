@@ -9,12 +9,16 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int star;
+	int i;
+	int read = 0;
+	unsigned long int now;
+	unsigned long int next = n ^ m;
 
-	for (star = 0; n || m; n >>=  1, m >>= 1)
+	for (i = 63; i >= 0; i++)
 	{
-		if ((n & 1) != (m & 1))
-			star++;
+		now = next >> 1;
+		if (now & 1)
+			read++;
 	}
-	return (star);
+	return (now);
 }

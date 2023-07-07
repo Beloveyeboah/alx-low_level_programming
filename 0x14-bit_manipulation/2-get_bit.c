@@ -1,19 +1,22 @@
 #include "main.h"
 
 /**
- * get_bit - get the bit from the the binary
+ * get_bit - return the bit of the binary
  *
  * @n: the number
  *
- * @index: the index of the way
- * Return: the interger
+ * @index: the index of the array
+ *
+ * Return: the ind
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int bin;
 
-	if (index > 63)
+	if (index >= sizeof(unsigned long int) * 8)
+	{
 		return (-1);
+	}
 	bin = (n >> index) & 1;
 	return (bin);
 }
