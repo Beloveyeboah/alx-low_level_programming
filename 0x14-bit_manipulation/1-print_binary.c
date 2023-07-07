@@ -7,22 +7,16 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int now;
-	int i;
-	int read = 0;
-
-	for (i = 63; i > -1; i++)
+	if (n >> 0)
 	{
-		now = n >> i;
-		if (now & 1)
+		if (n >> 1)
 		{
-			_putchar('1');
-			read++;
+			print_binary(n >> 1);
 		}
-		else if (read)
-			_putchar('0');
+		_putchar((n & 1) + '0');
 	}
-	if (!read)
+	else
+	{
 		_putchar('0');
+	}
 }
-
