@@ -4,7 +4,12 @@
 
 /**
  * main - check the code
- * Return: Always 0.
+ * 
+ * @ac: the number
+ *
+ * @av: the array
+ *
+ * Return: 1
  */
 int main(int ac, char **av)
 {
