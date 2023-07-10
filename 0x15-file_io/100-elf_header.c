@@ -18,10 +18,10 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
 
 /**
- * check_elf - ELF file.
- * @e_ident: ELF magic numbers.
+ * check_elf - Checks ELF file.
+ * @e_ident: elf
  *
- * Description: NOT  ELF file - exit code 98.
+ * Description: file is not an ELF file - exit code 98.
  */
 void check_elf(unsigned char *e_ident)
 {
@@ -41,10 +41,10 @@ void check_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic - ELF header.
+ * print_magic - Prints ELF header.
  * @e_ident: ELF magic numbers.
  *
- * Description: NOT ELF
+ * Description: commas
  */
 void print_magic(unsigned char *e_ident)
 {
@@ -64,7 +64,7 @@ void print_magic(unsigned char *e_ident)
 }
 
 /**
- * print_clas - ELF header.
+ * print_class - ELF header.
  * @e_ident: ELF class.
  */
 void print_class(unsigned char *e_ident)
@@ -178,7 +178,7 @@ void print_osabi(unsigned char *e_ident)
 
 /**
  * print_abi - ELF header.
- * @e_ident: A poiELF ABI version.
+ * @e_ident: ELF ABI version.
  */
 void print_abi(unsigned char *e_ident)
 {
@@ -188,7 +188,7 @@ void print_abi(unsigned char *e_ident)
 
 /**
  * print_type - ELF header.
- * @e_type:  ELF type.
+ * @e_type: The ELF type.
  * @e_ident: ELF class.
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
@@ -221,7 +221,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 }
 
 /**
- * print_entry - ELF header.
+ * print_entry - Prints thELF header.
  * @e_entry: ELF entry point.
  * @e_ident: ELF class.
  */
@@ -244,10 +244,10 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * close_elf - Close  ELF file.
+ * close_elf - Close an ELF file.
  * @elf: ELF file.
  *
- * Description: elf header
+ * Description: If the file cannot be closed - exit code 98.
  */
 void close_elf(int elf)
 {
@@ -260,13 +260,15 @@ void close_elf(int elf)
 }
 
 /**
- * main - Displays elf heas=d
- * @argc: The number of  program.
- * @argv: An array of pointers to the prog
+ * main - Displays the information contained in the
+ *        ELF header at the start of an ELF file.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Return: 0 on success.
+ * Return: 0
  *
- * Description: If the file is not an ELF File
+ * Description: If the file is not an ELF File or
+ *              the function fails - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
@@ -310,4 +312,3 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	close_elf(o);
 	return (0);
 }
-
