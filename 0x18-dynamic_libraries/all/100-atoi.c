@@ -1,5 +1,5 @@
 #include "main.h"
 
-int _abs(int n)
+int _atoi(char *s)
 {
 }
